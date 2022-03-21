@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Backend.Domain.Entities
+{
+    public class Produit
+    {
+        public Guid Id { get; set; }
+        public string Libelle { get; set; }
+        public string Reference { get; set; }
+        public DateTime DateEnregistrement { get; set; }
+        public ICollection<Propriete> Proprietes { get; set; }
+        public ICollection<LigneCommande> LigneCommandes { get; set; }
+    }
+}
